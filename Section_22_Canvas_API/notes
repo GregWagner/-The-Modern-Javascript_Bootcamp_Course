@@ -1,0 +1,11 @@
+Big Challenges
+1) How do we generate a maze?
+    Tree DS & recursion
+2) How are we going to draw this on the screen?
+    Use Matter JS onto canvas element
+3) Jow to make keyboards keys control the ball?
+    Matter JS has the ability to map key presses
+    to movement of shapes
+4) How to detect when ball touches the green square?
+    Matter JS has the ability to detect collision between
+    different shapes and report them to use as events

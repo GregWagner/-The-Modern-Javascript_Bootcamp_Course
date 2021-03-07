@@ -1,0 +1,35 @@
+Big Challenges
+1) Fetch data about movies
+    Need to search for list of movies that match a search term
+    Need to lookup a specific movie and get the needed details
+    Use omdbapi.com API
+2) Build the autocomplete widget from scratch
+    Need list of rules of how the autocomplete works
+3) Styling + css
+
+Autocomplete Widget Design
+  Default State
+    Empty input
+  User starts typing...
+  User finishes typing and we find no results
+    Hide menu
+  User finishes typing and we find matching movies
+    Show menu, display results
+    User presses enter
+      Do nothing (require user to click on the movie they want)
+    User clicks and entry
+      Update text, close menu
+    User clicks outside the dropdown
+      Close menu
+
+Debounce
+1) Everytime a keypress occurs a search is made
+2) Instead we want to wait until the user is done tying before
+   doing the search.
+   * Can use a JS library
+   * Can write our own debounce
+
+To Reuse the Autocomplete
+1) Update fetchData to the URL and change to the required params
+   and update the return
+2) Update renderOption() to indicate how (and what) to render:w

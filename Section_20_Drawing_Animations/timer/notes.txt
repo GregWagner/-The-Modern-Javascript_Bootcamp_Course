@@ -1,0 +1,38 @@
+This program does:
+  1) Display a timer
+  2) Shows an animated border around the timer
+
+Possible implementation
+- Event listener to watch for a click on 'start' button
+  - Draw a full border around the timer                 Border
+  - Start counting down the timer                       Timer
+  - Each time the timer counts down, update the border  Border
+  - Each time the timer counts down, update the text    Timer
+  - If we counted down and the timer reached 0          Timer
+    - Reset the border                                  Border
+    - Reset internal timer to get ready for another run Timer
+
+Event Driven
+- Event listener to watch for a click on 'start' button
+  - Emit an event stating that the timer has started
+  - Start counting down the timer                       Timer
+    - Emit an event that the timer has 'ticked'
+      - Watch for event, when it occurs, update border  Border
+    - Each time the timer counts down, update the text  Timer
+  - If we counted down and the timer reached 0          Timer
+    - Emit an even that the timer is done
+      - Watch for event, when it occurs, reset border   Border
+    - Reset internal timer to get ready for another run Timer
+
+Class Implementation
+  class Timer
+    constructor(durationInput, startButton, pauseButton)
+      - gets DOM elements to setup eventlisteners
+    start()
+      - called when start button pressed
+    pause()
+      - called when pause button pressed
+    onDurationChange()
+      - called when user changes timer value
+    tick()
+      - called eveery second
